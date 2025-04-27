@@ -1,0 +1,43 @@
+/* 1. @import statement should be at the top */
+@import url('https://fonts.googleapis.com/css2?family=Toxigenesis&display=swap');
+
+/* 2. Tailwind directives */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@tailwind screens;
+@tailwind typography;
+@tailwind forms;
+@tailwind aspect-ratio;
+@tailwind line-clamp;
+
+/* 3. Custom styles */
+body {
+  font-family: 'Toxigenesis', sans-serif;
+}
+
+@keyframes backgroundPulse {
+  0%, 100% {
+    background-position: center;
+  }
+  50% {
+    background-position: center 10%;
+  }
+}
+
+.animate-backgroundPulse {
+  animation: backgroundPulse 20s ease-in-out infinite;
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    text-shadow: 0 0 5px #0a686e7e, 0 0 10px #17463f, 0 0 20px #302e22;
+  }
+  50% {
+    text-shadow: 0 0 10px #0a686e7e, 0 0 20px #0a5e52, 0 0 30px #252418;
+  }
+}
+
+.animate-pulseGlow {
+  animation: pulseGlow 3s infinite;
+}
